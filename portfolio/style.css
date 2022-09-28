@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Maytra";
+  src: url("fonts/Maytra.otf") format("OpenType"),
+  url("fonts/Maytra.ttf")  format("TrueType");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/**GENERAL SETTINGS **/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type:none;
+
+}
+
+body{
+  background-color: #0c0c0c;
+  color: #ffffff;
+  display: flex;
+  overflow-x:hidden;
+  overflow-y:hidden;
+
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
+html{  scroll-behavior: smooth;}
+
+.bigtext{
+    position: inherit;
+    transform: translateY(-100%);
+    font-size: 10vw;
+    font-weight: 300;
+    line-height: 1;
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #ffffff;
+    opacity: 0.3;
+    white-space: nowrap;
+    padding-left: 20px;
+
+}
+
+section{
+
+  border: green solid 2px;
+
+
+}
+
+.content{  width: 100vw;
+           height: 100vh;
+          display: grid;
+
+        }
+
+
+/**Acceuil**/
+#acceuil {
+    z-index: 1;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+  }
+
+
+#acceuil h1{
+    position: absolute;
+    left:8vw;
+    top:35vh;
+    margin-bottom: 20px;
+    font-size: 15vw;
+    font-weight: 300;
+    color: #ffffff;
+    font-family: 'Maytra';
+
+
+}
+
+
+
+
+
+/** firstpart **/
+
+
+.basD{
+position: absolute;
+z-index: 99;
+right: -90%;
+
+}
+
+#firstpart .content img{
+z-index: 99;
+
+
+
+}
+
+
+
+
+/** Menu **/
+
+#mainHeader{
+    background-color:#0c0c0c;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    border-right: 2px solid 		#DAA520;
+    writing-mode : vertical-rl;
+    width: 50px;
+
+
+
+ }
+#mainHeader ul{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin: 50px 5px;
+
+
+}
+
+#mainHeader ul li a{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+
+/**Timeline **/
+
+
+#firstpart ol {
+  position: relative;
+  display: block;
+  margin: 100px;
+  height: 4px;
+  background: #DAA520;
+}
+#firstpart   ol::before,
+#firstpart ol::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 10px;
+  border: 10px solid #DAA520;
+}
+#firstpart  ol::before {
+  left: -5px;
+}
+#firstpart  ol::after {
+  right: -10px;
+  border: 10px solid transparent;
+  border-right: 0;
+  border-left: 20px solid #DAA520;
+  border-radius: 3px;
+}
+
+/* ---- Timeline elements ---- */
+#firstpart  li {
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: 30%;
+  height: 50px;
+
+}
+#firstpart  li .diplome {
+  position: absolute;
+  top: -47px;
+  left: 37%;
+  color: white;
+}
+#firstpart  li .point {
+  content: "";
+  top: -4px;
+  left: 43%;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 4px solid #DAA520;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+}
+.description {
+  display: none;
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+  font-weight: normal;
+  z-index: 1;
+}
+.description::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #f4f4f4;
+  position: absolute;
+  top: -5px;
+  left: 43%;
+}
+
+/* ---- Hover effects ---- */
+#firstpart  li:hover {
+  cursor: pointer;
+  color: #DAA520;
+}
+li:hover .description {
+  display: block;
+}
