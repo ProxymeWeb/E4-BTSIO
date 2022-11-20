@@ -1,11 +1,11 @@
 const mouseWheel = document.querySelector('html');
-
+  const ecran = screen.width;
 mouseWheel.addEventListener('wheel', function(e) {
-    const race = 300; // pixel
-
+  // pixel
+    console.log(ecran);
     if (e.deltaY > 0)
-        mouseWheel.scrollLeft += race;
+        mouseWheel.scrollLeft += ecran
     else
-        mouseWheel.scrollLeft -= race;
-		e.preventDefault();
+        mouseWheel.scrollLeft -= ecran;
+
 });

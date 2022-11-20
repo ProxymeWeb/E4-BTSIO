@@ -1,7 +1,20 @@
+
+
+
 @font-face {
   font-family: "Maytra";
   src: url("fonts/Maytra.otf") format("OpenType"),
   url("fonts/Maytra.ttf")  format("TrueType");
+}
+
+@font-face {
+  font-family: 'Bright';
+  src: url("fonts/Bright.otf")  format("OpenType");
+}
+
+@font-face {
+  font-family: 'Vogue';
+  src: url("fonts/Vogue.ttf")  format("TrueType");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -17,16 +30,22 @@
 body{
   background-color: #0c0c0c;
   color: #ffffff;
-  display: flex;
-  overflow-x:hidden;
+
+  overflow-x: scroll;
   overflow-y:hidden;
-
   font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 100vh;
 
+  display: flex;
+
+  scrollbar-color: #6969dd #e0e0e0;
+  scrollbar-width: thin;
 
 }
 
-html{  scroll-behavior: smooth;}
+html{  scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;}
 
 .bigtext{
     position: inherit;
@@ -39,13 +58,13 @@ html{  scroll-behavior: smooth;}
     -webkit-text-stroke: 1px #ffffff;
     opacity: 0.3;
     white-space: nowrap;
-    padding-left: 20px;
+    padding-left: 60px;
 
 }
 
 section{
 
-  border: green solid 2px;
+
 
 
 }
@@ -55,6 +74,15 @@ section{
           display: grid;
 
         }
+
+
+.block{
+     scroll-snap-align: start;
+     width: 100vw;
+     height: 100%;
+}
+
+
 
 
 /**Acceuil**/
@@ -76,31 +104,69 @@ section{
     font-family: 'Maytra';
 
 
-}
-
-
-
-
-
-/** firstpart **/
-
-
-.basD{
-position: absolute;
-z-index: 99;
-right: -90%;
 
 }
-
-#firstpart .content img{
-z-index: 99;
+#acceuil h2{
+    position: absolute;
+    left:8vw;
+    top:65vh;
+    margin-bottom: 20px;
+    font-size: 4vw;
+    font-weight:100;
+    color: #ffffff;
+    font-family: 'Vogue';
+    text-shadow: 1px 1px 2px grey;
 
 
 
 }
 
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: absolute;
+  right: 25px;
+  top:25px;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
 
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
 
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
 
 /** Menu **/
 
@@ -129,6 +195,74 @@ z-index: 99;
   font-family: 'Roboto', sans-serif;
   color: white;
 }
+/** firstpart **/
+.horizontal-scroll-wrapper{
+
+
+   transform-origin:right top;
+
+
+}
+.contenume{
+  position: relative;
+  display: flex;
+
+}
+.reseau{
+  border: 0.5px solid #9a9a95;
+  margin-left:5% ;
+  padding: 10px;
+  border-radius: 1em;
+  width: auto;
+  display: flex;
+  width: 25em;
+  height: 5em;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content:space-between;
+  justify-content:space-around;
+}
+.reseau img{ width: 70px
+}
+
+
+.basD{
+position: absolute;
+z-index: 99;
+right: -90%;
+bottom: 50px;
+
+}
+
+#firstpart .content img{
+z-index: 99;
+}
+
+.Language{
+ border: 0.5px solid #9a9a95;
+ margin-left:5% ;
+ padding: 10px;
+ border-radius: 1em;
+ width: auto;
+ display: flex;
+ width: 25em;
+ height: 10em;
+ flex-wrap: wrap;
+ align-items: center;
+ align-content:space-between;
+ justify-content:space-around;
+
+}
+
+.Language img{
+
+  height: 70px;
+  margin-right:7px;
+  margin-left:7px;
+
+}
+
+
 
 
 /**Timeline **/
@@ -218,4 +352,172 @@ z-index: 99;
 }
 li:hover .description {
   display: block;
+}
+
+
+/* ---- BTS SIO ---- */
+.projet{
+          display:flex;
+          justify-content: center;
+          align-items: center;
+
+          margin-top:50px;
+          flex-wrap:wrap;
+        /* DEBUG:    border: solid 1px pink;*/
+          margin: 50px;
+
+
+
+}
+
+.big-box{
+   width: 400px;
+   height:420px;
+   background: #1D1F20;
+   overflow: hidden;
+   margin: 20px;
+
+
+   transition: transform 400ms ease-out;
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+   display: flex;
+   align-items: center;
+   align-content:center;
+   flex-direction:column;
+
+
+
+             }
+
+.text{
+
+color:#7c7874 ;
+font-family: 'Bright';
+text-align: center;
+font-size:50px;
+}
+
+.big-box:hover{ transform: scale(1.04);}
+
+.big-box p{
+
+}
+
+.projet img{ display: block;
+                 width: 102%;
+                 margin: auto;
+                 object-fit: cover;
+                 transition: transform 400ms ease-out;}
+
+
+.projet video{ display: block;
+                 width: 100%;
+                 margin: auto;
+                 object-fit: cover;
+                 transition: transform 400ms ease-out;
+}
+
+
+
+.techno{
+
+display: flex;
+height: 100%;
+width:75%;
+}
+
+.techno img{
+
+
+}
+
+
+/** ScrollBar **/
+/* Track */
+::-webkit-scrollbar {
+  height: 10px;
+  border-radius: 2em;
+  width: 13px;
+
+
+}
+
+
+::-webkit-scrollbar-track {
+  margin-left: : 20px;
+  background: ;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 20px;
+
+
+}
+
+
+/** STAGE **/
+.content-stage{
+display: flex;
+background-color: #1D1F20;
+position: absolute;
+width: 100%;
+top: 20%;
+ align-items: center;
+}
+.sitestage{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+
+}
+.stageboite img{
+max-width: 280px;
+width: 100%;
+
+
+}
+.stageboite{
+   transition: transform 400ms ease-out;
+   margin: 5px;
+
+}
+.stageboite:hover{
+ transform: scale(1.04);}
+
+
+.wordp{
+  height: 350px;
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+}
+
+.logomeuzinfo{
+  margin-left: auto;
+  margin-right: auto;
+  height: 80px;
+  margin-top: 20px;
+
+
+}
+
+
+#proxyweb{position: absolute;
+          width: 350px;
+          bottom: 100px;
+          left:350vw;
+         z-index: 999}
+
+
+
+/**Conclusion**/
+
+
+
+#lastpart .content img{
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%
 }

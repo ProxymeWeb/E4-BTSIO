@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <script type='text/javascript' src="script/Xscroll.js"></script>
   <script type='text/javascript' src="script/parallax.js"></script>
+
   <!--Proviens de SimpleParallax-->
   <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 
@@ -17,11 +18,11 @@
       <nav role="navigation">
 
           <ul id="menu-vertical-menu" class="nav">
-              <li><a class="anchor" href="#">Acceuil</a></li>
+              <li><a class="anchor" href="#">Accueil</a></li>
               <li><a class="anchor" href="#firstpart">About me </a></li>
               <li><a class="anchor" href="#secondpart">Bts SIO</a></li>
-              <li><a class="anchor" href="#thirdpart">Stage</a></li>
-              <li><a class="anchor" href="#lastpart">Autres</a></li>
+              <li><a class="anchor" href="#thirdpart">Stages</a></li>
+              <li><a class="anchor" href="#lastpart">Conclusion</a></li>
 
   		</ul>
       </nav>
@@ -29,15 +30,23 @@
   </header>
 
 
-  <section id="acceuil" >
+  <section id="acceuil" class="block">
 
     <div class="content">
       <h1>Maxime Dervaux</h1>
+      <h2>Parcours de professionnalisation</h2>
+      <button class="button-30" role="button"><a href="TableauDeSynthèse.xlsx">Tableau de Synthese</a></button>
+
+
     </div>
+
+
   </section>
 
- <section id="firstpart">
+ <section id="firstpart" class="block ">
    <div class="content">
+
+
      <ol>
        <li>
          <p class="diplome">BAC STI2D</p>
@@ -57,46 +66,115 @@
          <p class="description">2022 :BTS Services informatiques aux organisations OPTION SLAM (Solutions Logicielles et Applications Métier)</p>
        </li>
        <li>
-
      </ol>
 
+    <div class="contenume">
+     <div class="Language">
+      <h1>Languages :</h1>
+     <img src="images/html.png">
+     <img src="images/css.png">
+     <img src="images/js.png">
+     <img src="images/php.png">
+     <img src="images/c.png">
+     <img src="images/vb.png">
+     <img src="images/python.png">
+     </div>
+
+     <div class="reseau">
+       <h1>Me retrouver :</h1>
+       <a  href="https://github.com/ProxymeWeb"><img  src="images/github.png"></a>
+       <a  href="mailto:maximeder.pro@gmail.com"><img  src="images/Gmail.png"></a>
+     </div>
+
+      </div>
      <img  class="basD" onmouseover="this.src='images/gif/max1.gif'" onmouseout="this.src='images/max.png'" src="images/max.png" style="transition: .5s all 5s;bottom:0px;"/>
      <img  data-speed="4"class="layer basD" src="images/cadre.png" style='right:-92%;width:300px;bottom:200px; transform: rotate(15deg);'>
+
    </div>
+
    <div class="bigtext">Aubout ME</div>
+
  </section>
 
- <section id="secondpart" >
+ <section id="secondpart" class="block">
 
-   <div class="content">
+   <div class="content ">
+     <div class="projet ">
+           <div class="big-box gradient-border " >
+               <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0">
+                  <source src="videos/Baseball.mp4" type="video/mp4"></source>
+
+               </video>
+
+            <div class="text"><p class="type">BaseballGame</p></div>
+             </div>
+           <div class="big-box gradient-border ">
+
+              <a href="https://travelscope.netlify.app/">  <img src="images/projet/travelscope_img1.png"></a>
+              <div class="text"><p class="type">Travelscope</p></div>
+              <div class="techno">
+
+
+              </div>
+             </div>
+             <div class="big-box gradient-border ">
+               <a href="https://calculatrice-tuto.netlify.app/">  <img src="images/projet/screenjeux.png"></a>
+               <div class="text"><p class="type">Semaine Banalisee</p></div>
+             </div>
+
+
+      </div>
+
 
    </div>
    <div class="bigtext">BTS SIO</div>
  </section>
 
 
- <section id="thirdpart" >
+ <section id="thirdpart" class="block" >
 
-   <div class="content">
+   <div class="content" style="margin-left:50px">
+       <img class="logomeuzinfo" src="images/Meuzinfo.png">
+       <div class="content-stage">
 
+        <section>
+
+           <div class="sitestage">
+             <a class="stageboite" href="https://edenpart.fr/"><img src="images/stage/Eden.jpg"> </a>
+             <a class="stageboite" href="https://eco-climat.fr/"><img src="images/stage/eco-climat.jpg"> </a>
+             <a class="stageboite" href="https://www.meuzinfo.fr/"><img src="images/stage/meuze.jpg"> </a>
+             <a class="stageboite" href="https://meuse-entreprendre.fr/"><img src="images/stage/entreprendre.jpg"> </a>
+             <a class="stageboite" href="https://schuster-expo.fr/"><img src="images/stage/shuster.jpg"> </a>
+             <a class="stageboite" href="https://v-nettoyage-vapeur.fr/"><img src="images/stage/vapeur.jpg"> </a>
+
+
+           </div>
+
+        </section>
+         <img class="wordp" src="images/wordpress-logo.jpg">
+
+       </div>
+
+  <img id="proxyweb" src="images/proxyweb.png">
    </div>
    <div class="bigtext">Stages</div>
  </section>
 
- <section id="lastpart" >
+ <section id="lastpart" class="block" >
 
    <div class="content">
-
+      <img src="images/programming-mathieu.webp">
    </div>
-   <div class="bigtext">Autres</div>
+
+
+     <div class="bigtext">Conclusion</div>
  </section>
+
+
 
 
 </body>
 
-<script>
-
-      </script>
 
 
 

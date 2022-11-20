@@ -9,3 +9,4 @@ function parallax(e){
     layer.style.transform=`translateX(${x}px) rotate(15deg)`
   })
 }
+
