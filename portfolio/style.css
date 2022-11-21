@@ -463,6 +463,7 @@ display: flex;
 background-color: #1D1F20;
 position: absolute;
 width: 100%;
+height: 50vh;
 top: 20%;
  align-items: center;
 }
@@ -473,8 +474,8 @@ top: 20%;
 
 }
 .stageboite img{
-max-width: 280px;
-width: 100%;
+
+width: 18vw;
 
 
 }
@@ -488,7 +489,7 @@ width: 100%;
 
 
 .wordp{
-  height: 350px;
+  height: 100%;
   border-top-left-radius: 2em;
   border-bottom-left-radius: 2em;
 }
@@ -505,7 +506,7 @@ width: 100%;
 
 #proxyweb{position: absolute;
           width: 350px;
-          bottom: 100px;
+          bottom: 20%;
           left:350vw;
          z-index: 999}
 
@@ -517,7 +518,37 @@ width: 100%;
 
 #lastpart .content img{
   width: 30vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%
+
+  margin-top: 5%;
+  margin-right:50px;
+  margin-left:50px;
+}
+
+
+.flex{
+
+  display: flex;
+  height: 80vh;
+  align-items: center;
+  margin-left: 50px;
+  justify-content:center;
+}
+
+.gboite{
+height: 70vh;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+.boite{
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  background-color: #1D1F20;
+  text-align: center;
+  padding:25px 5px;
+  max-height: 100px;
+  max-width: 400px;
+  vertical-align: middle;
 }
