@@ -117,6 +117,9 @@ h2{
 video{
   height: 85%;
 }
+li{
+  font-size: 20px;
+}
 /** ScrollBar **/
 /* Track */
 ::-webkit-scrollbar {

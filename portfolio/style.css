@@ -194,6 +194,7 @@ section{
 #mainHeader ul li a{
   font-family: 'Roboto', sans-serif;
   color: white;
+  font-size: 20px;
 }
 /** firstpart **/
 .horizontal-scroll-wrapper{
